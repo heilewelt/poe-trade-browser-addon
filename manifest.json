@@ -1,0 +1,26 @@
+{
+
+  "manifest_version": 2,
+  "name": "poe-trade-extension",
+  "version": "1.0",
+
+  "description": "Read periodically clipboard to recognize PoE item and open trade website.",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.pathofexile.com/trade/*"],
+      "js": ["poe-trade-extension.js"]
+    }
+  ],
+  
+  "permissions": [
+	"*://*.pathofexile.com/trade/*",
+	"clipboardRead",
+	"storage"
+  ]
+
+}
